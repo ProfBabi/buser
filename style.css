@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+}
+
+/* Estilos gerais */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 3;
+  background-color: #D3D3D3;
+  min-height: 100vh;
+  flex-direction: column; /* para organizar os itens filhos */
+  display:flex;
+
+}
+img{
+  display: flex;
+    align-items: center;
+    justify-content: space-between; /*  Ela distribui o espaço disponível entre os itens de forma que o primeiro item fique alinhado à esquerda, o último à direita*/
+    padding: 0 20px; /* Espaçamento interno */
+    position: relative;
+    top: 40px; /* Distância da altura da logo ao topo */
+    max-width: 100%; /* A imagem não ultrapassa o contêiner */
+    height: auto; /* Mantém a proporção */
+}
+header {
+  
+    background-image: url('image.png'); /* Substitua pelo caminho da sua imagem de fundo */
+    background-size: cover; /* a imagem de fundo preencha completamente o elemento, mantendo sua proporção. */
+    background-position: center; /* alinha a imagem de fundo no centro do elemento. */
+    height: 250px; /* Altura do cabeçalho */
+    
+  }
+
+a{
+  color: white;
+  text-decoration: none;
+  background-color: #696969;
+  padding: 10px;
+  
+  flex-direction: column;
+  border:none;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  left: 80%;
+  bottom:100%;
+  width: auto; /* Ajusta a largura para o conteúdo */
+  margin: 10px 0; /* Espaçamento entre os botões */
+  transition: background-color 0.3s;
+ 
+}
+a:hover{
+background-color:#FF1493;
+}
+
+main {
+  padding: 20px;
+  flex: 1;
+}
+#secao{
+  display: flex;
+  justify-content: space-between; /* Espaco entre as seções */
+ 
+}
+
+section {
+background:#A9A9A9;
+  padding: 15px;
+  width: 30%;
+  border-radius: 5px;
+  flex: 1; /* Cada seção ocupa o mesmo espaço */
+  margin: 10px; /* Espaçamento entre seções */
+  
+}
+@media (max-width: 768px) {
+  #secao {
+    flex-direction: column; /* Coloca as seções em coluna em telas pequenas */
+  }
+  
+  section {
+    width: 100%; /* Cada seção ocupa toda a largura */
+    margin: 5px 0; /* Reduz o espaçamento entre as seções */
+  }
+
+  a {
+    width: 100%; /* Botões ocupam toda a largura */
+    left: 0; /* Alinha os botões */
+    bottom: 0; /* Ajuste se necessário */
+    text-align: center; /* Centraliza o texto nos botões */
+  }
+}
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #FF1493;
+  color: white;
+  
+ 
+}
+
